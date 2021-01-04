@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A234F8259F7BA9FA273FEB53 /* Pods_Lunch_Money.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 586F53AE7EE3D81F0E61C911 /* Pods_Lunch_Money.framework */; };
+		B44AC128B41FC7996588EF9D /* Pods_Lunch_MoneyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C04526BE595C5BC654F65CD5 /* Pods_Lunch_MoneyTests.framework */; };
+		C907C77625A15C1500A74E96 /* TransactionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C907C77525A15C1500A74E96 /* TransactionsViewController.swift */; };
+		C907C77B25A15C3D00A74E96 /* TransactionsFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C907C77A25A15C3D00A74E96 /* TransactionsFilterViewController.swift */; };
+		C907C78025A2915A00A74E96 /* constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C907C77F25A2915A00A74E96 /* constants.swift */; };
+		C907C78525A2982E00A74E96 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = C907C78425A2982E00A74E96 /* Utils.swift */; };
+		C944A7245514406F6E5F8577 /* Pods_Lunch_Money_Lunch_MoneyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C47C9A450496CA67C76C5D7F /* Pods_Lunch_Money_Lunch_MoneyUITests.framework */; };
 		C94E2C84259B5E550014A338 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C94E2C83259B5E550014A338 /* AppDelegate.swift */; };
 		C94E2C86259B5E550014A338 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C94E2C85259B5E550014A338 /* SceneDelegate.swift */; };
 		C94E2C88259B5E550014A338 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C94E2C87259B5E550014A338 /* ViewController.swift */; };
@@ -15,6 +22,17 @@
 		C94E2C90259B5E5E0014A338 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C94E2C8E259B5E5E0014A338 /* LaunchScreen.storyboard */; };
 		C94E2C9B259B5E5E0014A338 /* Lunch_MoneyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C94E2C9A259B5E5E0014A338 /* Lunch_MoneyTests.swift */; };
 		C94E2CA6259B5E5F0014A338 /* Lunch_MoneyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C94E2CA5259B5E5F0014A338 /* Lunch_MoneyUITests.swift */; };
+		C94E2CBD259B62BA0014A338 /* CategoriesData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C94E2CBC259B62BA0014A338 /* CategoriesData.swift */; };
+		C94E2CC5259BE1750014A338 /* CategoriesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C94E2CC4259BE1750014A338 /* CategoriesManager.swift */; };
+		C94E2CD5259CC0540014A338 /* TransactionsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C94E2CD4259CC0540014A338 /* TransactionsData.swift */; };
+		C94E2CDA259CC07A0014A338 /* TransactionsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C94E2CD9259CC07A0014A338 /* TransactionsManager.swift */; };
+		C979426B259F86C7002CF015 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C979426A259F86C7002CF015 /* HomeViewController.swift */; };
+		C9B2754C259F994C00C841D6 /* RecentTransactionsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B2754A259F994C00C841D6 /* RecentTransactionsCell.swift */; };
+		C9B2754D259F994C00C841D6 /* RecentTransactionsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9B2754B259F994C00C841D6 /* RecentTransactionsCell.xib */; };
+		C9C5806B259D79F80046B24C /* AccountsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C5806A259D79F80046B24C /* AccountsData.swift */; };
+		C9C58070259D7C290046B24C /* AccountsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C5806F259D7C290046B24C /* AccountsManager.swift */; };
+		C9C5809B259E73A80046B24C /* AccountsOverviewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C58099259E73A80046B24C /* AccountsOverviewTableViewCell.swift */; };
+		C9C5809C259E73A80046B24C /* AccountsOverviewTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9C5809A259E73A80046B24C /* AccountsOverviewTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +53,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1C657D2C2BF9787B3E3E1C1D /* Pods-Lunch MoneyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lunch MoneyTests.release.xcconfig"; path = "Target Support Files/Pods-Lunch MoneyTests/Pods-Lunch MoneyTests.release.xcconfig"; sourceTree = "<group>"; };
+		5332A5CDF9D11571BCB5085E /* Pods-Lunch Money.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lunch Money.debug.xcconfig"; path = "Target Support Files/Pods-Lunch Money/Pods-Lunch Money.debug.xcconfig"; sourceTree = "<group>"; };
+		586F53AE7EE3D81F0E61C911 /* Pods_Lunch_Money.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Lunch_Money.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5F24ADB2522E5A90CC035148 /* Pods-Lunch Money-Lunch MoneyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lunch Money-Lunch MoneyUITests.debug.xcconfig"; path = "Target Support Files/Pods-Lunch Money-Lunch MoneyUITests/Pods-Lunch Money-Lunch MoneyUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		6F25C73E10DCD7A392CFC71A /* Pods-Lunch Money.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lunch Money.release.xcconfig"; path = "Target Support Files/Pods-Lunch Money/Pods-Lunch Money.release.xcconfig"; sourceTree = "<group>"; };
+		7B281F6FC08B331564093B28 /* Pods-Lunch Money-Lunch MoneyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lunch Money-Lunch MoneyUITests.release.xcconfig"; path = "Target Support Files/Pods-Lunch Money-Lunch MoneyUITests/Pods-Lunch Money-Lunch MoneyUITests.release.xcconfig"; sourceTree = "<group>"; };
+		A1698A7312E42BE5CD4A316A /* Pods-Lunch MoneyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lunch MoneyTests.debug.xcconfig"; path = "Target Support Files/Pods-Lunch MoneyTests/Pods-Lunch MoneyTests.debug.xcconfig"; sourceTree = "<group>"; };
+		C04526BE595C5BC654F65CD5 /* Pods_Lunch_MoneyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Lunch_MoneyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C47C9A450496CA67C76C5D7F /* Pods_Lunch_Money_Lunch_MoneyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Lunch_Money_Lunch_MoneyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C907C77525A15C1500A74E96 /* TransactionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsViewController.swift; sourceTree = "<group>"; };
+		C907C77A25A15C3D00A74E96 /* TransactionsFilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsFilterViewController.swift; sourceTree = "<group>"; };
+		C907C77F25A2915A00A74E96 /* constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = constants.swift; sourceTree = "<group>"; };
+		C907C78425A2982E00A74E96 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		C94E2C80259B5E550014A338 /* Lunch Money.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Lunch Money.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C94E2C83259B5E550014A338 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C94E2C85259B5E550014A338 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +80,17 @@
 		C94E2CA1259B5E5F0014A338 /* Lunch MoneyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Lunch MoneyUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C94E2CA5259B5E5F0014A338 /* Lunch_MoneyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lunch_MoneyUITests.swift; sourceTree = "<group>"; };
 		C94E2CA7259B5E5F0014A338 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C94E2CBC259B62BA0014A338 /* CategoriesData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesData.swift; sourceTree = "<group>"; };
+		C94E2CC4259BE1750014A338 /* CategoriesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesManager.swift; sourceTree = "<group>"; };
+		C94E2CD4259CC0540014A338 /* TransactionsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsData.swift; sourceTree = "<group>"; };
+		C94E2CD9259CC07A0014A338 /* TransactionsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsManager.swift; sourceTree = "<group>"; };
+		C979426A259F86C7002CF015 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		C9B2754A259F994C00C841D6 /* RecentTransactionsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentTransactionsCell.swift; sourceTree = "<group>"; };
+		C9B2754B259F994C00C841D6 /* RecentTransactionsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecentTransactionsCell.xib; sourceTree = "<group>"; };
+		C9C5806A259D79F80046B24C /* AccountsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountsData.swift; sourceTree = "<group>"; };
+		C9C5806F259D7C290046B24C /* AccountsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountsManager.swift; sourceTree = "<group>"; };
+		C9C58099259E73A80046B24C /* AccountsOverviewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountsOverviewTableViewCell.swift; sourceTree = "<group>"; };
+		C9C5809A259E73A80046B24C /* AccountsOverviewTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AccountsOverviewTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +98,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A234F8259F7BA9FA273FEB53 /* Pods_Lunch_Money.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +106,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B44AC128B41FC7996588EF9D /* Pods_Lunch_MoneyTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,12 +114,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C944A7245514406F6E5F8577 /* Pods_Lunch_Money_Lunch_MoneyUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4108334C2B9A3EC92CE5224F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				586F53AE7EE3D81F0E61C911 /* Pods_Lunch_Money.framework */,
+				C47C9A450496CA67C76C5D7F /* Pods_Lunch_Money_Lunch_MoneyUITests.framework */,
+				C04526BE595C5BC654F65CD5 /* Pods_Lunch_MoneyTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		61B016B1375D1896A2FA81FE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5332A5CDF9D11571BCB5085E /* Pods-Lunch Money.debug.xcconfig */,
+				6F25C73E10DCD7A392CFC71A /* Pods-Lunch Money.release.xcconfig */,
+				5F24ADB2522E5A90CC035148 /* Pods-Lunch Money-Lunch MoneyUITests.debug.xcconfig */,
+				7B281F6FC08B331564093B28 /* Pods-Lunch Money-Lunch MoneyUITests.release.xcconfig */,
+				A1698A7312E42BE5CD4A316A /* Pods-Lunch MoneyTests.debug.xcconfig */,
+				1C657D2C2BF9787B3E3E1C1D /* Pods-Lunch MoneyTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		C94E2C77259B5E550014A338 = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +151,8 @@
 				C94E2C99259B5E5E0014A338 /* Lunch MoneyTests */,
 				C94E2CA4259B5E5F0014A338 /* Lunch MoneyUITests */,
 				C94E2C81259B5E550014A338 /* Products */,
+				61B016B1375D1896A2FA81FE /* Pods */,
+				4108334C2B9A3EC92CE5224F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,6 +169,9 @@
 		C94E2C82259B5E550014A338 /* Lunch Money */ = {
 			isa = PBXGroup;
 			children = (
+				C94E2CB8259B5EC60014A338 /* Controller */,
+				C94E2CB7259B5EC10014A338 /* View */,
+				C94E2CB6259B5EB40014A338 /* Model */,
 				C94E2C83259B5E550014A338 /* AppDelegate.swift */,
 				C94E2C85259B5E550014A338 /* SceneDelegate.swift */,
 				C94E2C87259B5E550014A338 /* ViewController.swift */,
@@ -106,6 +179,8 @@
 				C94E2C8C259B5E5E0014A338 /* Assets.xcassets */,
 				C94E2C8E259B5E5E0014A338 /* LaunchScreen.storyboard */,
 				C94E2C91259B5E5E0014A338 /* Info.plist */,
+				C907C77F25A2915A00A74E96 /* constants.swift */,
+				C907C78425A2982E00A74E96 /* Utils.swift */,
 			);
 			path = "Lunch Money";
 			sourceTree = "<group>";
@@ -128,6 +203,80 @@
 			path = "Lunch MoneyUITests";
 			sourceTree = "<group>";
 		};
+		C94E2CB6259B5EB40014A338 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C9C58069259D79B60046B24C /* Accounts */,
+				C94E2CD3259CC0340014A338 /* Transactions */,
+				C94E2CCC259BE2D90014A338 /* Categories */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C94E2CB7259B5EC10014A338 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C9B27549259F991B00C841D6 /* RecentTransactionsCell */,
+				C9C58095259E70990046B24C /* AccountsOverviewCell */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C94E2CB8259B5EC60014A338 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C979426A259F86C7002CF015 /* HomeViewController.swift */,
+				C907C77525A15C1500A74E96 /* TransactionsViewController.swift */,
+				C907C77A25A15C3D00A74E96 /* TransactionsFilterViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		C94E2CCC259BE2D90014A338 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				C94E2CBC259B62BA0014A338 /* CategoriesData.swift */,
+				C94E2CC4259BE1750014A338 /* CategoriesManager.swift */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		C94E2CD3259CC0340014A338 /* Transactions */ = {
+			isa = PBXGroup;
+			children = (
+				C94E2CD4259CC0540014A338 /* TransactionsData.swift */,
+				C94E2CD9259CC07A0014A338 /* TransactionsManager.swift */,
+			);
+			path = Transactions;
+			sourceTree = "<group>";
+		};
+		C9B27549259F991B00C841D6 /* RecentTransactionsCell */ = {
+			isa = PBXGroup;
+			children = (
+				C9B2754A259F994C00C841D6 /* RecentTransactionsCell.swift */,
+				C9B2754B259F994C00C841D6 /* RecentTransactionsCell.xib */,
+			);
+			path = RecentTransactionsCell;
+			sourceTree = "<group>";
+		};
+		C9C58069259D79B60046B24C /* Accounts */ = {
+			isa = PBXGroup;
+			children = (
+				C9C5806A259D79F80046B24C /* AccountsData.swift */,
+				C9C5806F259D7C290046B24C /* AccountsManager.swift */,
+			);
+			path = Accounts;
+			sourceTree = "<group>";
+		};
+		C9C58095259E70990046B24C /* AccountsOverviewCell */ = {
+			isa = PBXGroup;
+			children = (
+				C9C58099259E73A80046B24C /* AccountsOverviewTableViewCell.swift */,
+				C9C5809A259E73A80046B24C /* AccountsOverviewTableViewCell.xib */,
+			);
+			path = AccountsOverviewCell;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,6 +284,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C94E2CAA259B5E5F0014A338 /* Build configuration list for PBXNativeTarget "Lunch Money" */;
 			buildPhases = (
+				C6788ACEEA460EAED71EBBA7 /* [CP] Check Pods Manifest.lock */,
 				C94E2C7C259B5E550014A338 /* Sources */,
 				C94E2C7D259B5E550014A338 /* Frameworks */,
 				C94E2C7E259B5E550014A338 /* Resources */,
@@ -152,6 +302,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C94E2CAD259B5E5F0014A338 /* Build configuration list for PBXNativeTarget "Lunch MoneyTests" */;
 			buildPhases = (
+				E11DC70B22AA5B3664808D83 /* [CP] Check Pods Manifest.lock */,
 				C94E2C92259B5E5E0014A338 /* Sources */,
 				C94E2C93259B5E5E0014A338 /* Frameworks */,
 				C94E2C94259B5E5E0014A338 /* Resources */,
@@ -170,6 +321,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C94E2CB0259B5E5F0014A338 /* Build configuration list for PBXNativeTarget "Lunch MoneyUITests" */;
 			buildPhases = (
+				ECB7BCBC90AE70A3EF04BBF1 /* [CP] Check Pods Manifest.lock */,
 				C94E2C9D259B5E5F0014A338 /* Sources */,
 				C94E2C9E259B5E5F0014A338 /* Frameworks */,
 				C94E2C9F259B5E5F0014A338 /* Resources */,
@@ -231,6 +383,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9B2754D259F994C00C841D6 /* RecentTransactionsCell.xib in Resources */,
+				C9C5809C259E73A80046B24C /* AccountsOverviewTableViewCell.xib in Resources */,
 				C94E2C90259B5E5E0014A338 /* LaunchScreen.storyboard in Resources */,
 				C94E2C8D259B5E5E0014A338 /* Assets.xcassets in Resources */,
 				C94E2C8B259B5E550014A338 /* Main.storyboard in Resources */,
@@ -253,13 +407,95 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		C6788ACEEA460EAED71EBBA7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Lunch Money-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E11DC70B22AA5B3664808D83 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Lunch MoneyTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ECB7BCBC90AE70A3EF04BBF1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Lunch Money-Lunch MoneyUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		C94E2C7C259B5E550014A338 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C979426B259F86C7002CF015 /* HomeViewController.swift in Sources */,
+				C94E2CDA259CC07A0014A338 /* TransactionsManager.swift in Sources */,
 				C94E2C88259B5E550014A338 /* ViewController.swift in Sources */,
+				C94E2CBD259B62BA0014A338 /* CategoriesData.swift in Sources */,
+				C94E2CD5259CC0540014A338 /* TransactionsData.swift in Sources */,
+				C907C77625A15C1500A74E96 /* TransactionsViewController.swift in Sources */,
+				C9B2754C259F994C00C841D6 /* RecentTransactionsCell.swift in Sources */,
+				C907C78525A2982E00A74E96 /* Utils.swift in Sources */,
+				C9C58070259D7C290046B24C /* AccountsManager.swift in Sources */,
+				C907C78025A2915A00A74E96 /* constants.swift in Sources */,
 				C94E2C84259B5E550014A338 /* AppDelegate.swift in Sources */,
+				C9C5809B259E73A80046B24C /* AccountsOverviewTableViewCell.swift in Sources */,
+				C94E2CC5259BE1750014A338 /* CategoriesManager.swift in Sources */,
+				C907C77B25A15C3D00A74E96 /* TransactionsFilterViewController.swift in Sources */,
+				C9C5806B259D79F80046B24C /* AccountsData.swift in Sources */,
 				C94E2C86259B5E550014A338 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -433,6 +669,7 @@
 		};
 		C94E2CAB259B5E5F0014A338 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5332A5CDF9D11571BCB5085E /* Pods-Lunch Money.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -452,6 +689,7 @@
 		};
 		C94E2CAC259B5E5F0014A338 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6F25C73E10DCD7A392CFC71A /* Pods-Lunch Money.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -471,6 +709,7 @@
 		};
 		C94E2CAE259B5E5F0014A338 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A1698A7312E42BE5CD4A316A /* Pods-Lunch MoneyTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -493,6 +732,7 @@
 		};
 		C94E2CAF259B5E5F0014A338 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1C657D2C2BF9787B3E3E1C1D /* Pods-Lunch MoneyTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -515,6 +755,7 @@
 		};
 		C94E2CB1259B5E5F0014A338 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5F24ADB2522E5A90CC035148 /* Pods-Lunch Money-Lunch MoneyUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -535,6 +776,7 @@
 		};
 		C94E2CB2259B5E5F0014A338 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7B281F6FC08B331564093B28 /* Pods-Lunch Money-Lunch MoneyUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

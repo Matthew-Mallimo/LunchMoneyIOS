@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AccountsOverviewTableViewCell" rowHeight="77" id="KGk-i7-Jjw" customClass="AccountsOverviewTableViewCell" customModule="Lunch_Money" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="357" height="77"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="357" height="77"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FGp-Uw-TtN">
+                        <rect key="frame" x="0.0" y="0.0" width="357" height="77"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pU9-Ny-8NE" userLabel="account_balance">
+                                <rect key="frame" x="10" y="41" width="337" height="26"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dwt-Tf-sQL" userLabel="account_name">
+                                <rect key="frame" x="10" y="10" width="337" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.98431372549999996" green="0.72156862749999995" blue="0.0" alpha="0.84999999999999998" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="pU9-Ny-8NE" firstAttribute="top" secondItem="Dwt-Tf-sQL" secondAttribute="bottom" constant="10" id="7TF-rJ-6KP"/>
+                            <constraint firstItem="pU9-Ny-8NE" firstAttribute="leading" secondItem="FGp-Uw-TtN" secondAttribute="leading" constant="10" id="KY3-zF-3lp"/>
+                            <constraint firstAttribute="trailing" secondItem="pU9-Ny-8NE" secondAttribute="trailing" constant="10" id="Xt3-zD-LZc"/>
+                            <constraint firstAttribute="trailing" secondItem="Dwt-Tf-sQL" secondAttribute="trailing" constant="10" id="dBW-DK-zKx"/>
+                            <constraint firstAttribute="bottom" secondItem="pU9-Ny-8NE" secondAttribute="bottom" constant="10" id="e2k-RA-uLy"/>
+                            <constraint firstItem="Dwt-Tf-sQL" firstAttribute="leading" secondItem="FGp-Uw-TtN" secondAttribute="leading" constant="10" id="fzR-ne-lpe"/>
+                            <constraint firstItem="Dwt-Tf-sQL" firstAttribute="top" secondItem="FGp-Uw-TtN" secondAttribute="top" constant="10" id="oOu-UB-sjk"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="FGp-Uw-TtN" secondAttribute="bottom" id="P2N-jX-pcy"/>
+                    <constraint firstItem="FGp-Uw-TtN" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="Pss-gc-gzR"/>
+                    <constraint firstAttribute="trailing" secondItem="FGp-Uw-TtN" secondAttribute="trailing" id="ROv-SB-3ts"/>
+                    <constraint firstItem="FGp-Uw-TtN" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="ln9-cv-NAv"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="accountBalance" destination="pU9-Ny-8NE" id="YUR-Yz-8PQ"/>
+                <outlet property="accountCell" destination="FGp-Uw-TtN" id="V8N-mZ-aTM"/>
+                <outlet property="accountName" destination="Dwt-Tf-sQL" id="d01-KX-jv5"/>
+            </connections>
+            <point key="canvasLocation" x="-241.30434782608697" y="142.29910714285714"/>
+        </tableViewCell>
+    </objects>
+</document>
