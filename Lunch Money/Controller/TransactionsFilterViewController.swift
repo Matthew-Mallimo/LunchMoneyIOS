@@ -24,13 +24,13 @@ class TransactionsFilterViewController: UIViewController {
 
     @IBAction func fromDateChanged(_ sender: UIDatePicker) {
         let formatter = DateFormatter()
-        formatter.dateFormat = "yyyy-MM-dd"
+        formatter.dateFormat = K.commonDateFormat
         fromDate = sender.date
         delegate?.fromDate = formatter.string(from: sender.date)
     }
     @IBAction func toDateChanged(_ sender: UIDatePicker) {
         let formatter = DateFormatter()
-        formatter.dateFormat = "yyyy-MM-dd"
+        formatter.dateFormat = K.commonDateFormat
         toDate = sender.date
         delegate?.toDate = formatter.string(from: sender.date)
     }

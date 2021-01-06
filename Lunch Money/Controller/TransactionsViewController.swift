@@ -12,17 +12,19 @@ class TransactionsViewController: UIViewController, UIAdaptivePresentationContro
     var fromDate: String?
     var toDate: String?
     var transactionsData: [TransactionData]?
+    var categoriesData: [CategoryData]?
     let transacitonsCellReuseIdentifier = "RecentTransactionsCell"
     
     @IBOutlet weak var transactionsTable: UITableView!
+    var categoriesManager = CategoriesManager()
     var transactionsManager = TransactionsManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("TransactionsViewController")
         transactionsTable.delegate = self
         transactionsTable.dataSource = self
         transactionsManager.delegate = self
+        categoriesManager.delegate = self
         
         transactionsTable.register(UINib(nibName: "RecentTransactionsCell", bundle: nil), forCellReuseIdentifier: transacitonsCellReuseIdentifier)
         // Do any additional setup after loading the view.
@@ -33,6 +35,7 @@ class TransactionsViewController: UIViewController, UIAdaptivePresentationContro
     
     func loadTransactions() {
         transactionsManager.fetchTransactions(fromDate: fromDate!, toDate: toDate!)
+        categoriesManager.fetchCategories()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -50,7 +53,7 @@ class TransactionsViewController: UIViewController, UIAdaptivePresentationContro
             let modalVC = segue.destination as! TransactionsFilterViewController
             
             let formatter = DateFormatter()
-            formatter.dateFormat = "yyyy-MM-dd"
+            formatter.dateFormat = K.commonDateFormat
             
             modalVC.fromDate = formatter.date(from: fromDate!)
             modalVC.toDate = formatter.date(from: toDate!)
@@ -63,11 +66,21 @@ class TransactionsViewController: UIViewController, UIAdaptivePresentationContro
     }
 }
 
-extension TransactionsViewController: TransactionsManagerDelegate {
+extension TransactionsViewController: CategoriesManagerDelegate {
+    
+    func didUpdateCategories(_ categoriesManager: CategoriesManager, categories: CategoriesList) {
+        self.categoriesData = categories.categories
+        DispatchQueue.main.async {
+            self.transactionsTable.reloadData()
+        }
+    }
+    
     func didFailWithError(error: Error) {
         print(error)
     }
-    
+}
+
+extension TransactionsViewController: TransactionsManagerDelegate {
     func didUpdateTransactions(_ transactionsManager: TransactionsManager, transactions: TransactionsList) {
         var transactionsCopy = transactions.transactions
         transactionsCopy.reverse()
@@ -94,10 +107,22 @@ extension TransactionsViewController: UITableViewDelegate, UITableViewDataSource
         
         // create a new cell if needed or reuse an old one
         let cell = tableView.dequeueReusableCell(withIdentifier: transacitonsCellReuseIdentifier, for: indexPath) as! RecentTransactionsCell
-        let payee = self.transactionsData?[indexPath.row].payee ?? ""
-        let date = self.transactionsData?[indexPath.row].date ?? ""
-        let amount = self.transactionsData?[indexPath.row].amount ?? ""
+        let transaction = self.transactionsData?[indexPath.row]
+        let payee = transaction?.payee ?? ""
+        let date = transaction?.date ?? ""
+        let amount = transaction?.amount ?? ""
+        var transactionCategory = ""
+        if let category = categoriesData?.first(where: {$0.id == transaction?.category_id}) {
+            transactionCategory = category.name ?? ""
+        }
+
+        if amount.contains("-") {
+            cell.priceLabel!.textColor = .systemGreen
+        } else {
+            cell.priceLabel!.textColor = .white
+        }
         
+        cell.category!.text = transactionCategory
         cell.payee!.text = payee
         cell.dateLabel!.text = date
         cell.priceLabel.text = currencyFormatter.string(from: NSNumber(value: Float(amount)!))

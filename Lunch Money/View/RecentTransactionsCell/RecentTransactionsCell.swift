@@ -12,6 +12,7 @@ class RecentTransactionsCell: UITableViewCell {
     @IBOutlet weak var payee: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
+    @IBOutlet weak var category: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

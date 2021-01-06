@@ -14,6 +14,7 @@ class HomeViewController: UIViewController {
     var accountsManager = AccountsManager()
     var accountsData: AccountsList?
     var transactionsData: [TransactionData]?
+    var categoriesData: [CategoryData]?
     let cellReuseIdentifier = "AccountsOverviewTableViewCell"
     let transacitonsCellReuseIdentifier = "RecentTransactionsCell"
     
@@ -27,6 +28,7 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         accountsManager.delegate = self
         transactionsManager.delegate = self
+        categoriesManager.delegate = self
         accountsTable.delegate = self
         accountsTable.dataSource = self
         transactionsTable.delegate = self
@@ -40,6 +42,21 @@ class HomeViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         accountsManager.fetchAccounts()
         transactionsManager.fetchTransactions()
+        categoriesManager.fetchCategories()
+    }
+}
+
+extension HomeViewController: CategoriesManagerDelegate {
+    
+    func didUpdateCategories(_ categoriesManager: CategoriesManager, categories: CategoriesList) {
+        self.categoriesData = categories.categories
+        DispatchQueue.main.async {
+            self.accountsTable.reloadData()
+        }
+    }
+    
+    func didFailWithError(error: Error) {
+        print(error)
     }
 }
 
@@ -50,10 +67,6 @@ extension HomeViewController: AccountsManagerDelegate {
         DispatchQueue.main.async {
             self.accountsTable.reloadData()
         }
-    }
-    
-    func didFailWithError(error: Error) {
-        print(error)
     }
 }
 
@@ -100,12 +113,22 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         } else {
             // create a new cell if needed or reuse an old one
             let cell = tableView.dequeueReusableCell(withIdentifier: transacitonsCellReuseIdentifier, for: indexPath) as! RecentTransactionsCell
-            let payee = self.transactionsData?[indexPath.row].payee ?? ""
-            let date = self.transactionsData?[indexPath.row].date ?? ""
-            let amount = self.transactionsData?[indexPath.row].amount ?? ""
+            let transaction = self.transactionsData?[indexPath.row]
+            let payee = transaction?.payee ?? ""
+            let date = transaction?.date ?? ""
+            let amount = transaction?.amount ?? ""
+            var transactionCategory = ""
+            if let category = categoriesData?.first(where: {$0.id == transaction?.category_id}) {
+                transactionCategory = category.name ?? ""
+            }
+
+            if amount.contains("-") {
+                cell.priceLabel!.textColor = .systemGreen
+            } else {
+                cell.priceLabel!.textColor = .white
+            }
             
-            
-            
+            cell.category!.text = transactionCategory
             cell.payee!.text = payee
             cell.dateLabel!.text = date
             cell.priceLabel.text = currencyFormatter.string(from: NSNumber(value: Float(amount)!))

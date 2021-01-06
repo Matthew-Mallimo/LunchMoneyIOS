@@ -20,11 +20,11 @@
                                 <rect key="frame" x="0.0" y="0.0" width="390" height="707"/>
                                 <subviews>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Paz-yk-I7h">
-                                        <rect key="frame" x="0.0" y="0.0" width="390" height="640"/>
+                                        <rect key="frame" x="0.0" y="8" width="390" height="651"/>
                                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </tableView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uYZ-Th-jAX">
-                                        <rect key="frame" x="217" y="652" width="142" height="42"/>
+                                        <rect key="frame" x="240" y="667" width="142" height="32"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <state key="normal" title="Filter">
                                             <color key="titleColor" red="0.98431372549999996" green="0.72156862749999995" blue="0.0" alpha="0.84999999999999998" colorSpace="calibratedRGB"/>
@@ -37,13 +37,13 @@
                                 <color key="backgroundColor" red="0.1176470588" green="0.1176470588" blue="0.1176470588" alpha="0.84999999999999998" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="Paz-yk-I7h" firstAttribute="leading" secondItem="Ysd-bJ-4kr" secondAttribute="leading" id="5dF-Pa-9fN"/>
-                                    <constraint firstItem="uYZ-Th-jAX" firstAttribute="leading" secondItem="Ysd-bJ-4kr" secondAttribute="leading" constant="217" id="72w-FL-Vf6"/>
-                                    <constraint firstAttribute="bottom" secondItem="uYZ-Th-jAX" secondAttribute="bottom" constant="13" id="IzH-6H-EFT"/>
-                                    <constraint firstAttribute="bottom" secondItem="Paz-yk-I7h" secondAttribute="bottom" constant="67" id="WI8-JO-Byj"/>
-                                    <constraint firstItem="uYZ-Th-jAX" firstAttribute="top" secondItem="Paz-yk-I7h" secondAttribute="bottom" constant="12" id="YwR-hn-Xml"/>
+                                    <constraint firstItem="uYZ-Th-jAX" firstAttribute="leading" secondItem="Ysd-bJ-4kr" secondAttribute="leading" constant="240" id="72w-FL-Vf6"/>
+                                    <constraint firstAttribute="bottom" secondItem="uYZ-Th-jAX" secondAttribute="bottom" constant="8" id="IzH-6H-EFT"/>
+                                    <constraint firstAttribute="bottom" secondItem="Paz-yk-I7h" secondAttribute="bottom" constant="48" id="WI8-JO-Byj"/>
+                                    <constraint firstItem="uYZ-Th-jAX" firstAttribute="top" secondItem="Paz-yk-I7h" secondAttribute="bottom" constant="8" id="YwR-hn-Xml"/>
                                     <constraint firstAttribute="trailing" secondItem="Paz-yk-I7h" secondAttribute="trailing" id="b1F-hU-aLM"/>
-                                    <constraint firstItem="Paz-yk-I7h" firstAttribute="top" secondItem="Ysd-bJ-4kr" secondAttribute="top" id="bGb-5j-1iK"/>
-                                    <constraint firstAttribute="trailing" secondItem="uYZ-Th-jAX" secondAttribute="trailing" constant="31" id="uzY-b5-cIk"/>
+                                    <constraint firstItem="Paz-yk-I7h" firstAttribute="top" secondItem="Ysd-bJ-4kr" secondAttribute="topMargin" id="bGb-5j-1iK"/>
+                                    <constraint firstAttribute="trailing" secondItem="uYZ-Th-jAX" secondAttribute="trailing" constant="8" id="uzY-b5-cIk"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -77,49 +77,49 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eNa-rA-whs">
                                 <rect key="frame" x="0.0" y="0.0" width="390" height="756"/>
                                 <subviews>
-                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="compact" translatesAutoresizingMaskIntoConstraints="NO" id="lK4-Na-Rcr">
-                                        <rect key="frame" x="0.0" y="63" width="390" height="162"/>
-                                        <connections>
-                                            <action selector="fromDateChanged:" destination="Hui-9e-m9d" eventType="valueChanged" id="WJf-ta-LoC"/>
-                                        </connections>
-                                    </datePicker>
                                     <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="compact" translatesAutoresizingMaskIntoConstraints="NO" id="otZ-Na-i4U">
-                                        <rect key="frame" x="0.0" y="278" width="390" height="162"/>
+                                        <rect key="frame" x="222" y="108" width="145" height="64"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="162" id="svl-II-lLy"/>
+                                            <constraint firstAttribute="height" constant="64" id="svl-II-lLy"/>
                                         </constraints>
                                         <connections>
                                             <action selector="toDateChanged:" destination="Hui-9e-m9d" eventType="valueChanged" id="uhj-Ch-Fvp"/>
                                         </connections>
                                     </datePicker>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Ac-yv-h9N">
-                                        <rect key="frame" x="8" y="25" width="168" height="30"/>
+                                        <rect key="frame" x="8" y="52" width="168" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="End Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gfs-dc-VC1">
-                                        <rect key="frame" x="8" y="240" width="168" height="30"/>
+                                        <rect key="frame" x="8" y="125" width="168" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="compact" translatesAutoresizingMaskIntoConstraints="NO" id="lK4-Na-Rcr">
+                                        <rect key="frame" x="222" y="39" width="141" height="57"/>
+                                        <connections>
+                                            <action selector="fromDateChanged:" destination="Hui-9e-m9d" eventType="valueChanged" id="WJf-ta-LoC"/>
+                                        </connections>
+                                    </datePicker>
                                 </subviews>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstItem="lK4-Na-Rcr" firstAttribute="top" secondItem="4Ac-yv-h9N" secondAttribute="bottom" constant="8" symbolic="YES" id="50O-sR-gcQ"/>
-                                    <constraint firstItem="otZ-Na-i4U" firstAttribute="top" secondItem="eNa-rA-whs" secondAttribute="top" constant="278" id="E53-19-qiN"/>
-                                    <constraint firstItem="otZ-Na-i4U" firstAttribute="leading" secondItem="eNa-rA-whs" secondAttribute="leading" id="Jcu-DM-wx9"/>
+                                    <constraint firstItem="lK4-Na-Rcr" firstAttribute="top" secondItem="4Ac-yv-h9N" secondAttribute="bottom" constant="-43" id="50O-sR-gcQ"/>
+                                    <constraint firstItem="otZ-Na-i4U" firstAttribute="top" secondItem="eNa-rA-whs" secondAttribute="top" constant="108" id="E53-19-qiN"/>
+                                    <constraint firstItem="otZ-Na-i4U" firstAttribute="leading" secondItem="eNa-rA-whs" secondAttribute="leading" constant="222" id="Jcu-DM-wx9"/>
                                     <constraint firstAttribute="trailing" secondItem="4Ac-yv-h9N" secondAttribute="trailing" constant="214" id="MfE-Wm-s95"/>
-                                    <constraint firstItem="otZ-Na-i4U" firstAttribute="trailing" secondItem="lK4-Na-Rcr" secondAttribute="trailing" id="NWW-F9-lYU"/>
+                                    <constraint firstItem="otZ-Na-i4U" firstAttribute="trailing" secondItem="lK4-Na-Rcr" secondAttribute="trailing" constant="4" id="NWW-F9-lYU"/>
                                     <constraint firstAttribute="trailing" secondItem="Gfs-dc-VC1" secondAttribute="trailing" constant="214" id="R7M-wF-cnL"/>
                                     <constraint firstItem="otZ-Na-i4U" firstAttribute="leading" secondItem="lK4-Na-Rcr" secondAttribute="leading" id="Rl2-g5-1Lt"/>
-                                    <constraint firstItem="4Ac-yv-h9N" firstAttribute="top" secondItem="eNa-rA-whs" secondAttribute="top" constant="25" id="SjA-yQ-FEI"/>
-                                    <constraint firstItem="Gfs-dc-VC1" firstAttribute="top" secondItem="lK4-Na-Rcr" secondAttribute="bottom" constant="15" id="XCA-P1-ymE"/>
+                                    <constraint firstItem="4Ac-yv-h9N" firstAttribute="top" secondItem="eNa-rA-whs" secondAttribute="top" constant="52" id="SjA-yQ-FEI"/>
+                                    <constraint firstItem="Gfs-dc-VC1" firstAttribute="top" secondItem="lK4-Na-Rcr" secondAttribute="bottom" constant="29" id="XCA-P1-ymE"/>
                                     <constraint firstItem="Gfs-dc-VC1" firstAttribute="leading" secondItem="eNa-rA-whs" secondAttribute="leading" constant="8" id="fcV-1H-4ju"/>
-                                    <constraint firstItem="otZ-Na-i4U" firstAttribute="top" secondItem="Gfs-dc-VC1" secondAttribute="bottom" constant="8" symbolic="YES" id="hQY-Mu-Pz2"/>
+                                    <constraint firstItem="otZ-Na-i4U" firstAttribute="top" secondItem="Gfs-dc-VC1" secondAttribute="bottom" constant="-47" id="hQY-Mu-Pz2"/>
                                     <constraint firstItem="4Ac-yv-h9N" firstAttribute="leading" secondItem="eNa-rA-whs" secondAttribute="leading" constant="8" id="s0r-im-2jZ"/>
-                                    <constraint firstAttribute="trailing" secondItem="otZ-Na-i4U" secondAttribute="trailing" id="tgI-57-twR"/>
+                                    <constraint firstAttribute="trailing" secondItem="otZ-Na-i4U" secondAttribute="trailing" constant="23" id="tgI-57-twR"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -146,11 +146,11 @@
             <objects>
                 <viewController id="rhP-gL-spP" customClass="HomeViewController" customModule="Lunch_Money" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6cb-mC-AFG">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="780"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="746"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B6U-44-MZ3">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="731"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="663"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0oU-TB-4We" userLabel="Account Overview View">
                                         <rect key="frame" x="26" y="8" width="362" height="329"/>
@@ -183,7 +183,7 @@
                                         <rect key="frame" x="26" y="356" width="362" height="329"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recent Transactions" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5fB-gj-jp5">
-                                                <rect key="frame" x="74.5" y="6.5" width="213" height="31.5"/>
+                                                <rect key="frame" x="74.666666666666686" y="6.6666666666666838" width="213" height="31.333333333333329"/>
                                                 <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="23"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>

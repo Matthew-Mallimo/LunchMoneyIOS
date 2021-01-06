@@ -9,4 +9,5 @@ import Foundation
 
 struct K {
     static let lunchMoneyAccessToken = "<insert your lunch money access token here>"
+    static let commonDateFormat = "yyyy-MM-dd"
 }

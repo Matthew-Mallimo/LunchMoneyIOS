@@ -12,7 +12,7 @@ struct DateUtils {
     static var currentDate: String {
         let date = Date()
         let formatter = DateFormatter()
-        formatter.dateFormat = "yyyy-MM-dd"
+        formatter.dateFormat =  K.commonDateFormat
         return formatter.string(from: date)
     }
     
@@ -21,7 +21,7 @@ struct DateUtils {
         let duration = DateComponents(calendar: Calendar.current, month: -1)
         let minusThirty = Calendar.current.date(byAdding: duration, to: date)!
         let formatter = DateFormatter()
-        formatter.dateFormat = "yyyy-MM-dd"
+        formatter.dateFormat =  K.commonDateFormat
         return formatter.string(from: minusThirty)
     }
 }
