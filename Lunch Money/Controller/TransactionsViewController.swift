@@ -13,6 +13,7 @@ class TransactionsViewController: UIViewController, UIAdaptivePresentationContro
     var toDate: String?
     var transactionsData: [TransactionData]?
     var categoriesData: [CategoryData]?
+    var categoryFilter = ""
     let transacitonsCellReuseIdentifier = "RecentTransactionsCell"
     
     @IBOutlet weak var transactionsTable: UITableView!
@@ -34,7 +35,7 @@ class TransactionsViewController: UIViewController, UIAdaptivePresentationContro
     }
     
     func loadTransactions() {
-        transactionsManager.fetchTransactions(fromDate: fromDate!, toDate: toDate!)
+        transactionsManager.fetchTransactions(fromDate: fromDate!, toDate: toDate!, category: categoryFilter)
         categoriesManager.fetchCategories()
     }
     
@@ -57,8 +58,35 @@ class TransactionsViewController: UIViewController, UIAdaptivePresentationContro
             
             modalVC.fromDate = formatter.date(from: fromDate!)
             modalVC.toDate = formatter.date(from: toDate!)
+            modalVC.categoryFilter = categoryFilter
+
+            modalVC.categoriesData = createEmptyCategory()
             modalVC.presentationController?.delegate = self
             modalVC.delegate = self
+        }
+    }
+    func createEmptyCategory() -> [CategoryData] {
+        let decoder = JSONDecoder()
+        do {
+            var categoriesCopy = categoriesData
+            let dummyData = """
+                {
+                    "name": "None",
+                    "id": -1,
+                    "is_income":false,
+                    "exclude_from_budget":false,
+                    "exclude_from_totals":false,
+                    "is_group":false
+                }
+            """.data(using: .utf8)!
+            let emptyCategory = try decoder.decode(CategoryData.self, from: dummyData)
+            categoriesCopy?.insert(emptyCategory, at: 0)
+            print(categoriesCopy)
+            return categoriesCopy!
+            
+        } catch {
+            print("Failed to create empty category")
+            return []
         }
     }
     func presentationControllerDidDismiss(_ presentationController: UIPresentationController) {

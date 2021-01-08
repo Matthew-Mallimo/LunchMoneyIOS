@@ -104,20 +104,36 @@
                                             <action selector="fromDateChanged:" destination="Hui-9e-m9d" eventType="valueChanged" id="WJf-ta-LoC"/>
                                         </connections>
                                     </datePicker>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Filter by Category" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tXI-JD-bnr">
+                                        <rect key="frame" x="8" y="245" width="254" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0kT-8G-pQE">
+                                        <rect key="frame" x="8" y="283" width="374" height="216"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </pickerView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
+                                    <constraint firstItem="0kT-8G-pQE" firstAttribute="leading" secondItem="eNa-rA-whs" secondAttribute="leading" constant="8" id="4X4-LR-0fv"/>
                                     <constraint firstItem="lK4-Na-Rcr" firstAttribute="top" secondItem="4Ac-yv-h9N" secondAttribute="bottom" constant="-43" id="50O-sR-gcQ"/>
+                                    <constraint firstAttribute="trailing" secondItem="0kT-8G-pQE" secondAttribute="trailing" constant="8" id="9rz-IB-oQL"/>
+                                    <constraint firstAttribute="trailing" secondItem="tXI-JD-bnr" secondAttribute="trailing" constant="128" id="BV5-9V-BTI"/>
                                     <constraint firstItem="otZ-Na-i4U" firstAttribute="top" secondItem="eNa-rA-whs" secondAttribute="top" constant="108" id="E53-19-qiN"/>
                                     <constraint firstItem="otZ-Na-i4U" firstAttribute="leading" secondItem="eNa-rA-whs" secondAttribute="leading" constant="222" id="Jcu-DM-wx9"/>
+                                    <constraint firstItem="tXI-JD-bnr" firstAttribute="leading" secondItem="eNa-rA-whs" secondAttribute="leading" constant="8" id="M5Y-2x-kZL"/>
                                     <constraint firstAttribute="trailing" secondItem="4Ac-yv-h9N" secondAttribute="trailing" constant="214" id="MfE-Wm-s95"/>
                                     <constraint firstItem="otZ-Na-i4U" firstAttribute="trailing" secondItem="lK4-Na-Rcr" secondAttribute="trailing" constant="4" id="NWW-F9-lYU"/>
                                     <constraint firstAttribute="trailing" secondItem="Gfs-dc-VC1" secondAttribute="trailing" constant="214" id="R7M-wF-cnL"/>
                                     <constraint firstItem="otZ-Na-i4U" firstAttribute="leading" secondItem="lK4-Na-Rcr" secondAttribute="leading" id="Rl2-g5-1Lt"/>
+                                    <constraint firstItem="0kT-8G-pQE" firstAttribute="top" secondItem="tXI-JD-bnr" secondAttribute="bottom" constant="8" symbolic="YES" id="SNf-IF-nBG"/>
                                     <constraint firstItem="4Ac-yv-h9N" firstAttribute="top" secondItem="eNa-rA-whs" secondAttribute="top" constant="52" id="SjA-yQ-FEI"/>
                                     <constraint firstItem="Gfs-dc-VC1" firstAttribute="top" secondItem="lK4-Na-Rcr" secondAttribute="bottom" constant="29" id="XCA-P1-ymE"/>
                                     <constraint firstItem="Gfs-dc-VC1" firstAttribute="leading" secondItem="eNa-rA-whs" secondAttribute="leading" constant="8" id="fcV-1H-4ju"/>
                                     <constraint firstItem="otZ-Na-i4U" firstAttribute="top" secondItem="Gfs-dc-VC1" secondAttribute="bottom" constant="-47" id="hQY-Mu-Pz2"/>
+                                    <constraint firstItem="tXI-JD-bnr" firstAttribute="top" secondItem="otZ-Na-i4U" secondAttribute="bottom" constant="73" id="j4h-m8-gNv"/>
                                     <constraint firstItem="4Ac-yv-h9N" firstAttribute="leading" secondItem="eNa-rA-whs" secondAttribute="leading" constant="8" id="s0r-im-2jZ"/>
                                     <constraint firstAttribute="trailing" secondItem="otZ-Na-i4U" secondAttribute="trailing" constant="23" id="tgI-57-twR"/>
                                 </constraints>
@@ -133,6 +149,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="categorySelector" destination="0kT-8G-pQE" id="ONk-6X-R0a"/>
                         <outlet property="fromDatePicker" destination="lK4-Na-Rcr" id="YDt-Tg-1xT"/>
                         <outlet property="toDatePicker" destination="otZ-Na-i4U" id="k3E-NO-5fx"/>
                     </connections>

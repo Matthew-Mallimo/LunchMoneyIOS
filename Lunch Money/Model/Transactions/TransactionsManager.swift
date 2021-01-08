@@ -17,8 +17,12 @@ struct TransactionsManager {
     
     var delegate: TransactionsManagerDelegate?
 
-    func fetchTransactions(fromDate: String = DateUtils.currentMinusThirty, toDate: String = DateUtils.currentDate) {
-        let urlWithDate = "\(transactionsUrl)?start_date=\(fromDate)&end_date=\(toDate)"
+    func fetchTransactions(fromDate: String = DateUtils.currentMinusThirty, toDate: String = DateUtils.currentDate, category: String = "") {
+        var categoryParam = ""
+        if category.count > 0 {
+            categoryParam = "&category_id=\(category)"
+        }
+        let urlWithDate = "\(transactionsUrl)?start_date=\(fromDate)&end_date=\(toDate)\(categoryParam)"
         if let url = URL(string: urlWithDate) {
             let session = URLSession(configuration: .default)
             var request = URLRequest(url: url)
