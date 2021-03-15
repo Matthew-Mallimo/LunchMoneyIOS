@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,8 @@
 		C907C77B25A15C3D00A74E96 /* TransactionsFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C907C77A25A15C3D00A74E96 /* TransactionsFilterViewController.swift */; };
 		C907C78025A2915A00A74E96 /* constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C907C77F25A2915A00A74E96 /* constants.swift */; };
 		C907C78525A2982E00A74E96 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = C907C78425A2982E00A74E96 /* Utils.swift */; };
+		C907C79125AAAACB00A74E96 /* CategoryListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C907C79025AAAACB00A74E96 /* CategoryListModel.swift */; };
+		C907C79925AB470200A74E96 /* TransactionsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C907C79825AB470200A74E96 /* TransactionsModel.swift */; };
 		C944A7245514406F6E5F8577 /* Pods_Lunch_Money_Lunch_MoneyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C47C9A450496CA67C76C5D7F /* Pods_Lunch_Money_Lunch_MoneyUITests.framework */; };
 		C94E2C84259B5E550014A338 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C94E2C83259B5E550014A338 /* AppDelegate.swift */; };
 		C94E2C86259B5E550014A338 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C94E2C85259B5E550014A338 /* SceneDelegate.swift */; };
@@ -27,6 +29,8 @@
 		C94E2CD5259CC0540014A338 /* TransactionsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C94E2CD4259CC0540014A338 /* TransactionsData.swift */; };
 		C94E2CDA259CC07A0014A338 /* TransactionsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C94E2CD9259CC07A0014A338 /* TransactionsManager.swift */; };
 		C979426B259F86C7002CF015 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C979426A259F86C7002CF015 /* HomeViewController.swift */; };
+		C991880425FDCA3D003A45F0 /* ExpensesVsIncome.swift in Sources */ = {isa = PBXBuildFile; fileRef = C991880325FDCA3D003A45F0 /* ExpensesVsIncome.swift */; };
+		C991880C25FDCA4D003A45F0 /* ExpensesVsIncome.xib in Resources */ = {isa = PBXBuildFile; fileRef = C991880B25FDCA4D003A45F0 /* ExpensesVsIncome.xib */; };
 		C9B2754C259F994C00C841D6 /* RecentTransactionsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B2754A259F994C00C841D6 /* RecentTransactionsCell.swift */; };
 		C9B2754D259F994C00C841D6 /* RecentTransactionsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9B2754B259F994C00C841D6 /* RecentTransactionsCell.xib */; };
 		C9C5806B259D79F80046B24C /* AccountsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C5806A259D79F80046B24C /* AccountsData.swift */; };
@@ -66,6 +70,8 @@
 		C907C77A25A15C3D00A74E96 /* TransactionsFilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsFilterViewController.swift; sourceTree = "<group>"; };
 		C907C77F25A2915A00A74E96 /* constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = constants.swift; sourceTree = "<group>"; };
 		C907C78425A2982E00A74E96 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		C907C79025AAAACB00A74E96 /* CategoryListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryListModel.swift; sourceTree = "<group>"; };
+		C907C79825AB470200A74E96 /* TransactionsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsModel.swift; sourceTree = "<group>"; };
 		C94E2C80259B5E550014A338 /* Lunch Money.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Lunch Money.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C94E2C83259B5E550014A338 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C94E2C85259B5E550014A338 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -85,6 +91,8 @@
 		C94E2CD4259CC0540014A338 /* TransactionsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsData.swift; sourceTree = "<group>"; };
 		C94E2CD9259CC07A0014A338 /* TransactionsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsManager.swift; sourceTree = "<group>"; };
 		C979426A259F86C7002CF015 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		C991880325FDCA3D003A45F0 /* ExpensesVsIncome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpensesVsIncome.swift; sourceTree = "<group>"; };
+		C991880B25FDCA4D003A45F0 /* ExpensesVsIncome.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExpensesVsIncome.xib; sourceTree = "<group>"; };
 		C9B2754A259F994C00C841D6 /* RecentTransactionsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentTransactionsCell.swift; sourceTree = "<group>"; };
 		C9B2754B259F994C00C841D6 /* RecentTransactionsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecentTransactionsCell.xib; sourceTree = "<group>"; };
 		C9C5806A259D79F80046B24C /* AccountsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountsData.swift; sourceTree = "<group>"; };
@@ -216,6 +224,7 @@
 		C94E2CB7259B5EC10014A338 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				C991880225FDC9E2003A45F0 /* ExpensesVsIncome */,
 				C9B27549259F991B00C841D6 /* RecentTransactionsCell */,
 				C9C58095259E70990046B24C /* AccountsOverviewCell */,
 			);
@@ -237,6 +246,7 @@
 			children = (
 				C94E2CBC259B62BA0014A338 /* CategoriesData.swift */,
 				C94E2CC4259BE1750014A338 /* CategoriesManager.swift */,
+				C907C79025AAAACB00A74E96 /* CategoryListModel.swift */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -246,8 +256,18 @@
 			children = (
 				C94E2CD4259CC0540014A338 /* TransactionsData.swift */,
 				C94E2CD9259CC07A0014A338 /* TransactionsManager.swift */,
+				C907C79825AB470200A74E96 /* TransactionsModel.swift */,
 			);
 			path = Transactions;
+			sourceTree = "<group>";
+		};
+		C991880225FDC9E2003A45F0 /* ExpensesVsIncome */ = {
+			isa = PBXGroup;
+			children = (
+				C991880325FDCA3D003A45F0 /* ExpensesVsIncome.swift */,
+				C991880B25FDCA4D003A45F0 /* ExpensesVsIncome.xib */,
+			);
+			path = ExpensesVsIncome;
 			sourceTree = "<group>";
 		};
 		C9B27549259F991B00C841D6 /* RecentTransactionsCell */ = {
@@ -288,6 +308,7 @@
 				C94E2C7C259B5E550014A338 /* Sources */,
 				C94E2C7D259B5E550014A338 /* Frameworks */,
 				C94E2C7E259B5E550014A338 /* Resources */,
+				C8F92D0055AF10B326AD20B1 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -325,6 +346,7 @@
 				C94E2C9D259B5E5F0014A338 /* Sources */,
 				C94E2C9E259B5E5F0014A338 /* Frameworks */,
 				C94E2C9F259B5E5F0014A338 /* Resources */,
+				EDC1F3680530B561F5FE9E24 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -387,6 +409,7 @@
 				C9C5809C259E73A80046B24C /* AccountsOverviewTableViewCell.xib in Resources */,
 				C94E2C90259B5E5E0014A338 /* LaunchScreen.storyboard in Resources */,
 				C94E2C8D259B5E5E0014A338 /* Assets.xcassets in Resources */,
+				C991880C25FDCA4D003A45F0 /* ExpensesVsIncome.xib in Resources */,
 				C94E2C8B259B5E550014A338 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -428,6 +451,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C8F92D0055AF10B326AD20B1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Lunch Money/Pods-Lunch Money-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Lunch Money/Pods-Lunch Money-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Lunch Money/Pods-Lunch Money-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		E11DC70B22AA5B3664808D83 /* [CP] Check Pods Manifest.lock */ = {
@@ -474,6 +514,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		EDC1F3680530B561F5FE9E24 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Lunch Money-Lunch MoneyUITests/Pods-Lunch Money-Lunch MoneyUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Lunch Money-Lunch MoneyUITests/Pods-Lunch Money-Lunch MoneyUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Lunch Money-Lunch MoneyUITests/Pods-Lunch Money-Lunch MoneyUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -483,10 +540,12 @@
 			files = (
 				C979426B259F86C7002CF015 /* HomeViewController.swift in Sources */,
 				C94E2CDA259CC07A0014A338 /* TransactionsManager.swift in Sources */,
+				C907C79125AAAACB00A74E96 /* CategoryListModel.swift in Sources */,
 				C94E2C88259B5E550014A338 /* ViewController.swift in Sources */,
 				C94E2CBD259B62BA0014A338 /* CategoriesData.swift in Sources */,
 				C94E2CD5259CC0540014A338 /* TransactionsData.swift in Sources */,
 				C907C77625A15C1500A74E96 /* TransactionsViewController.swift in Sources */,
+				C991880425FDCA3D003A45F0 /* ExpensesVsIncome.swift in Sources */,
 				C9B2754C259F994C00C841D6 /* RecentTransactionsCell.swift in Sources */,
 				C907C78525A2982E00A74E96 /* Utils.swift in Sources */,
 				C9C58070259D7C290046B24C /* AccountsManager.swift in Sources */,
@@ -496,6 +555,7 @@
 				C94E2CC5259BE1750014A338 /* CategoriesManager.swift in Sources */,
 				C907C77B25A15C3D00A74E96 /* TransactionsFilterViewController.swift in Sources */,
 				C9C5806B259D79F80046B24C /* AccountsData.swift in Sources */,
+				C907C79925AB470200A74E96 /* TransactionsModel.swift in Sources */,
 				C94E2C86259B5E550014A338 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

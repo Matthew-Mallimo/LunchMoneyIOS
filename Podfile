@@ -6,6 +6,11 @@ target 'Lunch Money' do
   use_frameworks!
 
   # Pods for Lunch Money
+  pod 'Charts'
+  
+  # Pod for easy progress bar
+  pod "LinearProgressBar"
+
 
   target 'Lunch MoneyTests' do
     inherit! :search_paths

@@ -1,3 +1,22 @@
-PODFILE CHECKSUM: e073e4e721b4ca6d8176725f7716843a1217fda6
+PODS:
+  - Charts (3.6.0):
+    - Charts/Core (= 3.6.0)
+  - Charts/Core (3.6.0)
+  - LinearProgressBar (1.0.2)
+
+DEPENDENCIES:
+  - Charts
+  - LinearProgressBar
+
+SPEC REPOS:
+  trunk:
+    - Charts
+    - LinearProgressBar
+
+SPEC CHECKSUMS:
+  Charts: b1e3a1f5a1c9ba5394438ca3b91bd8c9076310af
+  LinearProgressBar: 619d6f286b608e501f39406557f60cdab3faf910
+
+PODFILE CHECKSUM: f386ba9a1d00514e10a7151e298e1544201316b5
 
 COCOAPODS: 1.10.0

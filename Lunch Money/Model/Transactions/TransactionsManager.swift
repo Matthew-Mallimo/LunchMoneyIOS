@@ -8,7 +8,7 @@
 import Foundation
 
 protocol TransactionsManagerDelegate {
-    func didUpdateTransactions(_ transactionsManager: TransactionsManager, transactions: TransactionsList)
+    func didUpdateTransactions(_ transactionsManager: TransactionsManager, transactions: TransactionsModel)
     func didFailWithError(error: Error)
 }
 
@@ -23,7 +23,7 @@ struct TransactionsManager {
             categoryParam = "&category_id=\(category)"
         }
         let urlWithDate = "\(transactionsUrl)?start_date=\(fromDate)&end_date=\(toDate)\(categoryParam)"
-        if let url = URL(string: urlWithDate) {
+        if let url = URL(string: transactionsUrl) {
             let session = URLSession(configuration: .default)
             var request = URLRequest(url: url)
             request.httpMethod = "GET"
@@ -43,13 +43,14 @@ struct TransactionsManager {
         }
     }
     
-    func parseJSON(_ transactionsData: Data) -> TransactionsList? {
+    func parseJSON(_ transactionsData: Data) -> TransactionsModel? {
         let decoder = JSONDecoder()
         do {
 //            let str = String(decoding: transactionsData, as: UTF8.self)
 //            print("BODY \n \(str)")
             let decodedData = try decoder.decode(TransactionsList.self, from: transactionsData)
-            return decodedData
+            let transactionModel = TransactionsModel(transactionsList: decodedData.transactions)
+            return transactionModel
             
         } catch {
             print("parse fail", error)

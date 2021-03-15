@@ -8,7 +8,7 @@
 import Foundation
 
 protocol CategoriesManagerDelegate {
-    func didUpdateCategories(_ categoriesManager: CategoriesManager, categories: CategoriesList)
+    func didUpdateCategories(_ categoriesManager: CategoriesManager, categories: CategoryListModel)
     func didFailWithError(error: Error)
 }
 
@@ -38,11 +38,12 @@ struct CategoriesManager {
         }
     }
     
-    func parseJSON(_ categoriesData: Data) -> CategoriesList? {
+    func parseJSON(_ categoriesData: Data) -> CategoryListModel? {
         let decoder = JSONDecoder()
         do {
             let decodedData = try decoder.decode(CategoriesList.self, from: categoriesData)
-            return decodedData
+            let categoriesList = CategoryListModel(categoriesList: decodedData.categories)
+            return categoriesList
             
         } catch {
             delegate?.didFailWithError(error: error)

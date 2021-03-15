@@ -11,8 +11,8 @@ class TransactionsViewController: UIViewController, UIAdaptivePresentationContro
 
     var fromDate: String?
     var toDate: String?
-    var transactionsData: [TransactionData]?
-    var categoriesData: [CategoryData]?
+    var transactionsData: TransactionsModel?
+    var categoriesData: CategoryListModel?
     var categoryFilter = ""
     let transacitonsCellReuseIdentifier = "RecentTransactionsCell"
     
@@ -68,7 +68,7 @@ class TransactionsViewController: UIViewController, UIAdaptivePresentationContro
     func createEmptyCategory() -> [CategoryData] {
         let decoder = JSONDecoder()
         do {
-            var categoriesCopy = categoriesData
+            var categoriesCopy = categoriesData?.categoriesList
             let dummyData = """
                 {
                     "name": "None",
@@ -81,7 +81,6 @@ class TransactionsViewController: UIViewController, UIAdaptivePresentationContro
             """.data(using: .utf8)!
             let emptyCategory = try decoder.decode(CategoryData.self, from: dummyData)
             categoriesCopy?.insert(emptyCategory, at: 0)
-            print(categoriesCopy)
             return categoriesCopy!
             
         } catch {
@@ -96,8 +95,8 @@ class TransactionsViewController: UIViewController, UIAdaptivePresentationContro
 
 extension TransactionsViewController: CategoriesManagerDelegate {
     
-    func didUpdateCategories(_ categoriesManager: CategoriesManager, categories: CategoriesList) {
-        self.categoriesData = categories.categories
+    func didUpdateCategories(_ categoriesManager: CategoriesManager, categories: CategoryListModel) {
+        self.categoriesData = categories
         DispatchQueue.main.async {
             self.transactionsTable.reloadData()
         }
@@ -109,10 +108,9 @@ extension TransactionsViewController: CategoriesManagerDelegate {
 }
 
 extension TransactionsViewController: TransactionsManagerDelegate {
-    func didUpdateTransactions(_ transactionsManager: TransactionsManager, transactions: TransactionsList) {
-        var transactionsCopy = transactions.transactions
-        transactionsCopy.reverse()
-        self.transactionsData = transactionsCopy
+    func didUpdateTransactions(_ transactionsManager: TransactionsManager, transactions: TransactionsModel) {
+        self.transactionsData = transactions
+        print(transactions.categorySpend)
         DispatchQueue.main.async {
             self.transactionsTable.reloadData()
         }
@@ -135,14 +133,12 @@ extension TransactionsViewController: UITableViewDelegate, UITableViewDataSource
         
         // create a new cell if needed or reuse an old one
         let cell = tableView.dequeueReusableCell(withIdentifier: transacitonsCellReuseIdentifier, for: indexPath) as! RecentTransactionsCell
-        let transaction = self.transactionsData?[indexPath.row]
+        let transaction = self.transactionsData?.getAt(index: indexPath.row, reversed: true)
         let payee = transaction?.payee ?? ""
         let date = transaction?.date ?? ""
         let amount = transaction?.amount ?? ""
-        var transactionCategory = ""
-        if let category = categoriesData?.first(where: {$0.id == transaction?.category_id}) {
-            transactionCategory = category.name ?? ""
-        }
+        
+        let transactionCategory = categoriesData?.getCategoryNameFromId(id: transaction?.category_id ?? -1)
 
         if amount.contains("-") {
             cell.priceLabel!.textColor = .systemGreen
